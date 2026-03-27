@@ -27,7 +27,10 @@ setup(
             'controlled_pub = joystick_pacs.controlled_publisher:main',
             'imu_pub = joystick_pacs.imu_publisher:main',
             'simpleSerialPub = joystick_pacs.simple_serial_publisher:main',
-            'arm_gui = joystick_pacs.arm_button:main'
+            'arm_gui = joystick_pacs.arm_button:main',
+            'better_imu = joystick_pacs.imu_pub_updated:main',
+            'param_gui = joystick_pacs.param_gui:main',
+            'slider_gui = joystick_pacs.slider_gui:main'
         ],
     },
 )

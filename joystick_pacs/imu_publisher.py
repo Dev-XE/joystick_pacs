@@ -10,7 +10,7 @@ from rclpy.qos import qos_profile_sensor_data
 
 START_BYTE  = 0xAA
 STOP_BYTE   = 0x55
-PACKET_SIZE = 40 
+PACKET_SIZE = 52 
 
 class IMUPacketNode(Node):
     def __init__(self):

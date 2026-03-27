@@ -92,7 +92,7 @@ class joyMasterNode(Node):
         self.invertStatus = {'SURGE':False,'HEAVE':False,'SWAY':False,"YAW":False}
         self.axisIdMap = {0:'YAW',1:'SURGE',3:'SWAY',4:'HEAVE'}
         self.startValuePublisher = False
-        self.commandPublisher = self.create_publisher(Twist,'nemo_auv/cmd_vel',10)
+        self.commandPublisher = self.create_publisher(Twist,'nemo_auv/cmd_vel_raw',10)
         self.nemo_command_publisher = self.create_publisher(RovCommands,'/nemo_auv/input_cmd',10)
         self.depth_lock_publisher = self.create_publisher(Bool,'/nemo_auv/depth_lock',10)
         self.commandTimer = self.create_timer(0.1,self.publish_cmd)
@@ -124,7 +124,7 @@ class joyMasterNode(Node):
         msg = Twist()
         msg_command = RovCommands()
         msg.linear.x = float(self.normalizeJoystickInput(1))
-        msg.angular.z = float(self.normalizeJoystickInput(0))
+        msg.angular.z = float(self.normalizeJoystickInput(0))/2.00
         msg.linear.z = float(self.normalizeJoystickInput(4))
         msg.angular.x = float(0)
         msg.angular.y = float(0)
