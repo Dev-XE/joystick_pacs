@@ -237,36 +237,14 @@ ros2 run joystick_pacs better_imu
 ## Building
 
 ```bash
-cd ~/ros2_ws/src
+cd ~/<workspace name>_ws/src
 git clone <repository-url> joystick_pacs
 cd ..
 colcon build --packages-select joystick_pacs
 source install/setup.bash
 ```
 
-## Running a Complete Control Stack
 
-```bash
-# Terminal 1: Joystick input
-ros2 run joystick_pacs joy_node
-
-# Terminal 2: Serial to thrusters
-ros2 run joystick_pacs serialPub
-
-# Terminal 3: IMU data (if using external IMU)
-ros2 run joystick_pacs imu_pub
-
-# Terminal 4: Arm GUI (optional)
-ros2 run joystick_pacs arm_gui
-```
-
-## License
-
-Specify your license here (e.g., MIT, BSD, Apache-2.0)
-
-## Maintainer
-
-- **zappington** - abhinavs1306@gmail.com
 
 ## Contributing
 
