@@ -244,8 +244,3 @@ colcon build --packages-select joystick_pacs
 source install/setup.bash
 ```
 
-
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
